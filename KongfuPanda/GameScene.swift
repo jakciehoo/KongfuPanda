@@ -128,7 +128,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate , ProtocolMainscreen{
         }
         
         if (contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask) == (BitMaskType.scene | BitMaskType.panda) {
-            println("game over")
+            print("game over")
             myLabel.text = "game over";
             sound.playDead()
             isLose = true
@@ -159,7 +159,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate , ProtocolMainscreen{
     }
     
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if isLose {
             reSet()
         }else{
@@ -190,7 +190,7 @@ class GameScene: SKScene,SKPhysicsContactDelegate , ProtocolMainscreen{
             
         }else{
             if panda.position.x < 200 {
-                var x = panda.position.x + 1
+                let x = panda.position.x + 1
                 panda.position = CGPointMake(x, panda.position.y)
             }
             distance += moveSpeed

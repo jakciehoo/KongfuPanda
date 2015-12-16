@@ -39,35 +39,34 @@ class Panda:SKSpriteNode {
             let tempName = String(format: "panda_run_%.2d", i)
             let runTexture = runAtlas.textureNamed(tempName)
             
-            if (runTexture != nil) {
+
                 runFrames.append(runTexture)
-            }
+            
         }
         //跳
         for var i = 1; i<=jumpAtlas.textureNames.count; i++ {
             let tempName = String(format: "panda_jump_%.2d", i)
             let jumpTexture = jumpAtlas.textureNamed(tempName)
             
-            if (jumpTexture != nil) {
+  
                 jumpFrames.append(jumpTexture)
-            }
+            
         }
         //滚
         for var i = 1; i<=rollAtlas.textureNames.count; i++ {
             let tempName = String(format: "panda_roll_%.2d", i)
             let rollTexture = rollAtlas.textureNamed(tempName)
             
-            if (rollTexture != nil) {
+           
                 rollFrames.append(rollTexture)
-            }
+            
         }
         // 跳的时候的点缀效果
         for var i=1 ; i <= jumpEffectAtlas.textureNames.count ; i++ {
             let tempName = String(format: "jump_effect_%.2d", i)
             let effectexture = jumpEffectAtlas.textureNamed(tempName)
-            if (effectexture != nil) {
                 jumpEffectFrames.append(effectexture)
-            }
+            
         }
         jumpEffect = SKSpriteNode(texture: jumpEffectFrames[0])
         jumpEffect.position = CGPointMake(-80, -30)
@@ -129,8 +128,8 @@ class Panda:SKSpriteNode {
     
     func showJumpEffect(){
         jumpEffect.hidden = false
-        var ectAct = SKAction.animateWithTextures( jumpEffectFrames, timePerFrame: 0.05)
-        var removeAct = SKAction.runBlock({() in
+        let ectAct = SKAction.animateWithTextures( jumpEffectFrames, timePerFrame: 0.05)
+        let removeAct = SKAction.runBlock({() in
             self.jumpEffect.hidden = true
         })
         // 执行两个动作，先显示，后隐藏

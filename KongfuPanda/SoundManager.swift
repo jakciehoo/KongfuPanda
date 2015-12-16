@@ -10,8 +10,8 @@ class SoundManager :SKNode{
     let eatAct = SKAction.playSoundFileNamed("hit.mp3", waitForCompletion: false)
     
     func playBackgroundMusic(){
-        var bgMusicURL:NSURL =  NSBundle.mainBundle().URLForResource("apple", withExtension: "mp3")!
-        bgMusicPlayer=AVAudioPlayer(contentsOfURL: bgMusicURL, error: nil)
+        let bgMusicURL:NSURL =  NSBundle.mainBundle().URLForResource("apple", withExtension: "mp3")!
+        bgMusicPlayer = try! AVAudioPlayer(contentsOfURL: bgMusicURL)
         bgMusicPlayer.numberOfLoops = -1
         bgMusicPlayer.prepareToPlay()
         bgMusicPlayer.play()

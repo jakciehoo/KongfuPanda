@@ -40,7 +40,7 @@ class PlatformFactory:SKNode {
         arrPlatform.append(platform_left)
         platform.position = CGPointMake(x, y)
         
-        for i in 1...midNum {
+        for _ in 1...midNum {
             let platform_mid = SKSpriteNode(texture: textureMid)
             platform_mid.anchorPoint = CGPointMake(0, 0.9)
             arrPlatform.append(platform_mid)

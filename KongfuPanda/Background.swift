@@ -17,20 +17,20 @@ class Background:SKNode {
     
     override init() {
         super.init()
-        var farTexture = SKTexture(imageNamed: "background_f1")
-        var farBg0 = SKSpriteNode(texture: farTexture)
+        let farTexture = SKTexture(imageNamed: "background_f1")
+        let farBg0 = SKSpriteNode(texture: farTexture)
         farBg0.position.y = 150
         farBg0.zPosition = 9
         farBg0.anchorPoint = CGPointMake(0, 0)
         
 
-        var farBg1 = SKSpriteNode(texture: farTexture)
+        let farBg1 = SKSpriteNode(texture: farTexture)
         farBg1.position.y = 150
         farBg1.zPosition = 9
         farBg1.anchorPoint = CGPointMake(0, 0)
         farBg1.position.x = farBg1.frame.width
         
-        var farBg2 = SKSpriteNode(texture: farTexture)
+        let farBg2 = SKSpriteNode(texture: farTexture)
         farBg2.position.y = 150
         farBg2.zPosition = 9
         farBg2.anchorPoint = CGPointMake(0, 0)
@@ -43,13 +43,13 @@ class Background:SKNode {
          arrFar.append(farBg1)
          arrFar.append(farBg2)
         
-        var texture = SKTexture(imageNamed: "background_f0")
-        var bg0 = SKSpriteNode(texture: texture)
+        let texture = SKTexture(imageNamed: "background_f0")
+        let bg0 = SKSpriteNode(texture: texture)
         bg0.anchorPoint = CGPointMake(0, 0)
         bg0.position.y = 70
         bg0.zPosition = 10
         
-        var bg1 = SKSpriteNode(texture: texture)
+        let bg1 = SKSpriteNode(texture: texture)
         bg1.anchorPoint = CGPointMake(0, 0)
         bg1.position.y = 70
         bg1.zPosition = 10

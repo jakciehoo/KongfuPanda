@@ -21,9 +21,9 @@ class AppleFactory:SKNode{
         timer = NSTimer.scheduledTimerWithTimeInterval( 0.2, target: self, selector: "createApple", userInfo: nil, repeats: true)
     }
     func createApple(){
-        var random = arc4random() % 10
+        let random = arc4random() % 10
         if random > 8 {
-            var apple = SKSpriteNode(texture: appleTexture)
+            let apple = SKSpriteNode(texture: appleTexture)
             apple.physicsBody = SKPhysicsBody(rectangleOfSize: apple.size)
             apple.physicsBody!.restitution = 0
             apple.physicsBody!.categoryBitMask = BitMaskType.apple
